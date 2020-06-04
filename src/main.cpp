@@ -74,7 +74,7 @@ void init ()
     lsm6dsl->set_x_odr(3330.0f);
 	lsm6dsl->set_x_fs(4.0f);
 	lsm6dsl->enable_x();
-	thread_sleep_for(100);
+	wait_ms(100);
 #ifdef NEAI_LIB
 	NanoEdgeAI_initialize();
 #endif
@@ -227,9 +227,9 @@ void led_blink_burst_ko()
 {
 	for (uint8_t j = 0; j < 5; j++) {
 		led = 1;
-		thread_sleep_for(200);
+		wait_ms(200);
 		led = 0;
-		thread_sleep_for(200);
+		wait_ms(200);
 	}
 
 }
@@ -237,9 +237,9 @@ void led_blink_learning_over()
 {
 	for (uint8_t j = 0; j < 5; j++) {
 		led = 1;
-		thread_sleep_for(1000);
+		wait_ms(1000);
 		led = 0;
-		thread_sleep_for(250);
+		wait_ms(250);
 	}
 
 }
@@ -247,9 +247,9 @@ void led_blink_ok()
 {
 	for (uint8_t j = 0; j < 2; j++) {
 		led = 1;
-		thread_sleep_for(1000);
+		wait_ms(1000);
 		led = 0;
-		thread_sleep_for(250);
+		wait_ms(250);
 	}
 
 }
